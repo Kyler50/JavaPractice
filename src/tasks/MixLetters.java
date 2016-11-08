@@ -13,7 +13,7 @@ public class MixLetters {
 			for (char letter : word.toCharArray()) {
 				letters.add(letter);
 			}
-			if (letters.size() > 2) {
+			if (letters.size() > 3) {
 				Collections.shuffle(letters.subList(1, letters.size()- 1));
 			}
 			for (char letter : letters) {

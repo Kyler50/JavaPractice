@@ -28,7 +28,7 @@ public class NumberGuess {
 	public static void main(String[] args) {
 		NumberGuess test = new NumberGuess();
 		test.NumGuess();
-		
+	
 		
 	}
 }

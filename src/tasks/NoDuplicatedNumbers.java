@@ -9,7 +9,7 @@ public class NoDuplicatedNumbers {
         for(int i=0;i<arrayLen;i++){
             for(int j = i+1; j< arrayLen ; j++){
                 if(((number[i]^number[j]) == 0)){
-                	number[j] = 0;
+                	number[j] = 8;
                 }
                     
             }
@@ -18,9 +18,9 @@ public class NoDuplicatedNumbers {
 	}
 	public static void main(String[] args) 
 	{
-	    int[] numbers = new int[10];       
+	    int[] numbers = new int[5000];       
 	    for(int i = 0; i < numbers.length; i++) {
-	      numbers[i] = (int)(Math.random()*20);
+	      numbers[i] = (int)(Math.random()*10);
 	    }
 	    System.out.println("Numbers Generated: " + Arrays.toString(numbers));
 	    NoDuplicatedNumbers test = new NoDuplicatedNumbers();
