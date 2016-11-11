@@ -10,15 +10,17 @@ public class HundredDoors {
 		        }
 		      }
 		    }
-		 
+		    int count = 0;
 		    for (int i = 1; i <= 100; i++) {
-		      System.out.print("Door " + i + " is ");
+		      System.out.print("Az " + i + " ajtó ");
 		      if (doors[i] == true ){
-		        System.out.println("opened");
+		        System.out.println("nyitva");
+		        count++;
 		      } else {
-		        System.out.println("closed");
+		        System.out.println("zárva");
 		      }
 		    }
+		    System.out.println("Nyított ajtók: " + count);
 		  }
 	public static void main(String[] args) {
 		HundredDoors.doorsAreOpen();

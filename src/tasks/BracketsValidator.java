@@ -1,3 +1,4 @@
+
 package tasks;
 
 import java.util.Stack;
@@ -33,8 +34,7 @@ public class BracketsValidator
 				else
 				{
 					previous = stack.peek();
-					if ((current == ')' && previous == '(') || (current == ']' && previous == '[')
-					        || (current == '}' && previous == '{'))
+					if ((current == ')' && previous == '(') || (current == ']' && previous == '[') || (current == '}' && previous == '{'))
 					{
 						stack.pop();
 					}
@@ -45,16 +45,12 @@ public class BracketsValidator
 				}
 			}
 		}
-		if (!stack.isEmpty())
-		{
-			result = false;
-		}
 		return result;
 	}
 
 	public static void main(String[] args)
 	{
-		BracketsValidator bv = new BracketsValidator("[({})]");
+		BracketsValidator bv = new BracketsValidator("[({([)]})]");
 		System.out.println(bv.validate());
 	}
 }
