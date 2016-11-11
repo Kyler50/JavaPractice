@@ -1,4 +1,7 @@
-public class CityPopulation{
+package tasks;
+
+public class Populations
+{
 	int[] peoples;
 	
 	
@@ -9,28 +12,23 @@ public class CityPopulation{
 		}
 	}
 	public void born(int percent){
-		int size = peoples.length + peoples.length * (percent/100);
+		int size = peoples.length + (peoples.length * percent/100) + 50;
 		int[] result = new int[size];
 		for(int i = 0; i < result.length; i++){
 			result[i] = 1;
 		}
 		peoples = result;
-	}
-	public void arrive(){
-		int size = peoples.length + 50;
-		int[] result = new int[size];
-		peoples = result + result;
+		System.out.println(peoples.length);
 	}
 	public void increment(){
 		born(2);
-		arrive();
 		
 	}
 	public int getCitySize(){
 		return peoples.length;
 	}
 	public static void main(String[] args){
-		CityPopulation test = new CityPopulation();
+		Populations test = new Populations();
 		int count = 0;
 		test.init(1000);
 			while(test.getCitySize() <= 1300){
